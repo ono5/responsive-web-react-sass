@@ -1,0 +1,18 @@
+// forwardはscssをまとめることができる
+@forward "../abstracts//variables";
+@forward "../abstracts/mixins";
+
+/*
+元々は呼び出し元で、
+@use "../abstracts//variables";
+@use "../abstracts/mixins";
+variables.$white
+mixins.position
+などのように使っていた
+
+しかし、これを使うと
+@use "../abstracts";
+abstracts.$white
+abstracts.position
+などで呼び出すことが可能になる
+*/
