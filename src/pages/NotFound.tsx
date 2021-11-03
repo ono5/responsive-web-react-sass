@@ -1,6 +1,14 @@
+import { Helmet } from "react-helmet-async"
+
 const NotFound = () => {
 	return (
-		<h1>Not Found</h1>
+		<>
+			<Helmet>
+				<title>Not found</title>
+				<meta name="description" content="Travel friends not found page"/>
+			</Helmet>
+			<h1>Not Found</h1>
+		</>
 	)
 }
 

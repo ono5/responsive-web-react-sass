@@ -35,3 +35,16 @@ npm i concurrently
 ## CSS clip-path maker
 
 https://bennettfeely.com/clippy/
+
+# react-helmet-async
+
+https://www.npmjs.com/package/react-helmet-async
+
+```
+npm i react-helmet-async
+```
+
+## Create favicon.io
+https://favicon.io/
+
+TEXT -> ICO
