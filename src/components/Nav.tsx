@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import NavContext from "../context/NavContext"
 
 const Nav = () => {
-	const {state, dispatch} = useContext(NavContext)
+	const {state} = useContext(NavContext)
 	console.log('nav state: ', state)
 	return (
 		<>

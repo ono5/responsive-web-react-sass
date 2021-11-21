@@ -7,10 +7,12 @@ import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
+import Details from './pages/Details'
 import ModelProvider from './context/providers/ModelProvider'
 import NavProvider from './context/providers/NavProvider'
 import Nav from './components/Nav'
 import Toggle from './components/Toggle'
+import DestinationsProvider from './context/providers/DestinationsProviders'
 
 function App() {
   return (
@@ -18,15 +20,18 @@ function App() {
       <Router>
         <ModelProvider>
           <NavProvider>
-            <Toggle />
-            <Nav />
-            <HelmetProvider>
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/about" exact component={About} />
-                <Route component={NotFound} />
-              </Switch>
-            </HelmetProvider>
+            <DestinationsProvider>
+              <Toggle />
+              <Nav />
+              <HelmetProvider>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/about" exact component={About} />
+                  <Route path="/details/:id" exact component={Details} />
+                  <Route component={NotFound} />
+                </Switch>
+              </HelmetProvider>
+            </DestinationsProvider>
           </NavProvider>
         </ModelProvider>
       </Router>

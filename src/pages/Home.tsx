@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import Header from '../components/Header'
 import Model from '../components/Model'
@@ -6,6 +6,7 @@ import ModelContext from '../context/ModelContext'
 import { OPEN_MODEL } from '../context/types/ModelTypes'
 import Register from '../auth/Register'
 import Login from '../auth/Login'
+import Destinations from '../components/Destinations'
 
 const Home = () => {
 	const {dispatch} = useContext(ModelContext)
@@ -16,6 +17,9 @@ const Home = () => {
 	})
 	const [registerModel] = useState('registerModel')
 	const [loginModel] = useState('loginModel')
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 	return (
 		<>
 			<Helmet>
@@ -23,7 +27,7 @@ const Home = () => {
 				<meta name="description" content="Travel to teh world with travel friends"/>
 				<meta name="keywords" content="travel, travel tours, airlines" />
 			</Helmet>
-			<Header heading={state.heading} paragraph={state.paragraph}>
+			<Header heading={state.heading} paragraph={state.paragraph} image="">
 				<button
 					className="btn-default"
 					onClick={() => dispatch({ type: OPEN_MODEL, payload: registerModel })}
@@ -35,6 +39,7 @@ const Home = () => {
 			<Model current={loginModel}>
 				<Login currentModel={registerModel} />
 			</Model>
+			<Destinations />
 		</>
 	)
 }

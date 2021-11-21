@@ -45,6 +45,24 @@ npm i react-helmet-async
 ```
 
 ## Create favicon.io
+
 https://favicon.io/
 
 TEXT -> ICO
+
+## Loading Process
+
+react-lazy-load-image-component
+
+```
+npm i react-lazy-load-image-component
+npm i --save-dev @types/react-lazy-load-image-component
+```
+
+## React Icons
+
+https://react-icons.github.io/react-icons/
+
+```
+npm install react-icons --save
+```
