@@ -4,7 +4,6 @@ import DestinationsList from './DestinationsList'
 
 const Destinations = () => {
 	const {destinationsData: {destinations}} = useContext(DestinationsContext)
-	console.log('data:', destinations)
 
 	const [state] = useState({
 		heading: 'Discover the most engaging places in the world with Travel Friends',

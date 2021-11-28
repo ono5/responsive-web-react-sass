@@ -11,6 +11,7 @@ const DestinationsProvider = (props: any) => {
 		cities: Cities,
 		filteredCities: [],
 	})
+
 	return (
 		<DestinationsContext.Provider value={{ destinationsData, dispatch }}>
 			{props.children}

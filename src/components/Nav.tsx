@@ -4,7 +4,6 @@ import NavContext from "../context/NavContext"
 
 const Nav = () => {
 	const {state} = useContext(NavContext)
-	console.log('nav state: ', state)
 	return (
 		<>
 		{state ? <div className="navLayer"></div> : <></>}

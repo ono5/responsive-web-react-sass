@@ -10,9 +10,10 @@ import NotFound from './pages/NotFound'
 import Details from './pages/Details'
 import ModelProvider from './context/providers/ModelProvider'
 import NavProvider from './context/providers/NavProvider'
+import DestinationsProvider from './context/providers/DestinationsProviders'
+import SharedProvider from './context/providers/SharedProvider'
 import Nav from './components/Nav'
 import Toggle from './components/Toggle'
-import DestinationsProvider from './context/providers/DestinationsProviders'
 
 function App() {
   return (
@@ -21,16 +22,18 @@ function App() {
         <ModelProvider>
           <NavProvider>
             <DestinationsProvider>
-              <Toggle />
-              <Nav />
-              <HelmetProvider>
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/about" exact component={About} />
-                  <Route path="/details/:id" exact component={Details} />
-                  <Route component={NotFound} />
-                </Switch>
-              </HelmetProvider>
+              <SharedProvider>
+                <Toggle />
+                <Nav />
+                <HelmetProvider>
+                  <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/about" exact component={About} />
+                    <Route path="/details/:id" exact component={Details} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </HelmetProvider>
+              </SharedProvider>
             </DestinationsProvider>
           </NavProvider>
         </ModelProvider>
