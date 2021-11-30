@@ -2,10 +2,12 @@ import { useReducer } from "react";
 import SharedContext from "../SharedContext";
 import SharedReducer from "../reducers/SharedReducer";
 import { services } from "../../data/services";
+import reviews from "../../data/reviews";
 
 const SharedProvider = (props: any) => {
 	const [sharedData, dispatch] = useReducer(SharedReducer, {
 		servicesData: services,
+		reviews: reviews,
 	})
 
 	return (
