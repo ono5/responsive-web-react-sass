@@ -15,6 +15,7 @@ import SharedProvider from './context/providers/SharedProvider'
 import GalleryProvider from './context/providers/GalleryProvider'
 import Nav from './components/Nav'
 import Toggle from './components/Toggle'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                       <Route path="/" exact component={Home} />
                       <Route path="/about" exact component={About} />
                       <Route path="/details/:id" exact component={Details} />
+                      <Route path="/contact" exact component={Contact} />
                       <Route component={NotFound} />
                     </Switch>
                   </HelmetProvider>

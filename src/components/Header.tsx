@@ -1,5 +1,6 @@
 import {useState} from "react"
 import { LazyLoadImage } from "react-lazy-load-image-component"
+import { useHistory } from "react-router"
 
 const Header = ({heading, paragraph, children, image}: {heading: string, paragraph: string, children: any, image: string}) => {
 	const [state] = useState({
@@ -8,11 +9,16 @@ const Header = ({heading, paragraph, children, image}: {heading: string, paragra
 		logo: "/assets/images/logo.png",
 	})
 
+	const { push } = useHistory()
+	const goToHome = () => {
+		push('/')
+	}
+
 	return (
 		<div className="header">
 			<div className="container pr">
 				<div className="header__logo">
-					<LazyLoadImage src={state.logo} alt="logo" />
+					<LazyLoadImage src={state.logo} alt="logo" onClick={goToHome} />
 				</div>
 			</div>
 			<div className="header__video">

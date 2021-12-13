@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import { Helmet } from "react-helmet-async"
 import PageContainer from "../components/pages-parts/PageContainer"
 import Footer from "../components/footer/Footer"
-import AboutImage from "../components/pages-parts/AboutImage"
+import ContactForm from "../components/pages-parts/ContactForm"
 
-const About = () => {
+const Contact = () => {
   const [state] = useState({
-    heading: "about us",
-    pageHeading: 'world best travel agency company since 2005',
+    heading: "contact us",
+    pageHeading: 'leave your message in the contact form',
     message: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio facere nobis in nam quibusdam animi odio aliquam dicta qui, hic corporis dolore voluptatibus facilis minus sit aperiam id officia."
   })
   useEffect(() => {
@@ -16,15 +16,16 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About page</title>
-        <meta name="description" content="Travel friends about page"/>
+        <title>Contact page</title>
+        <meta name="description" content="Travel friends contact page"/>
       </Helmet>
       <PageContainer data={state}>
-        <AboutImage />
-      </PageContainer>
+	  	<ContactForm />
+	  </PageContainer>
       <Footer />
     </>
   )
+
 }
 
-export default About
+export default Contact

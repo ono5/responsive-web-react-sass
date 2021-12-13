@@ -13,6 +13,7 @@
       width: 15rem;
       height: auto;
       object-fit: cover;
+      cursor: pointer;
       animation: headerImage 0.5s linear;
       @keyframes headerImage {
         from {
