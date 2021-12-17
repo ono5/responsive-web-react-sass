@@ -7,11 +7,11 @@ const Cities = (props: {cities: [cityType], name: string}) => {
 		<div className="cities">
 			<div className="container">
 				<div className="cities__container">
-					<h2 className="heading">Cities in {props.name}</h2>
+					<h2 className="heading headingAnimation">Cities in {props.name}</h2>
 					<div className="row ml-minus-15 mr-minus-15">
 						{props.cities.length > 0 ? props.cities.map((city) => (
 							<div className="col-3 p-15" key={city.id}>
-								<div className="cities__body">
+								<div className="cities__body animation">
 									<CityImage image={city.image} status={city.status} />
 									<CityContents
 										name={city.name}

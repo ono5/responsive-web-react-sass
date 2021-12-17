@@ -16,6 +16,7 @@ import GalleryProvider from './context/providers/GalleryProvider'
 import Nav from './components/Nav'
 import Toggle from './components/Toggle'
 import Contact from './pages/Contact'
+import AnimationsProvider from './context/providers/AnimationsProvider'
 
 function App() {
   return (
@@ -26,17 +27,19 @@ function App() {
             <GalleryProvider>
               <DestinationsProvider>
                 <SharedProvider>
-                  <Toggle />
-                  <Nav />
-                  <HelmetProvider>
-                    <Switch>
-                      <Route path="/" exact component={Home} />
-                      <Route path="/about" exact component={About} />
-                      <Route path="/details/:id" exact component={Details} />
-                      <Route path="/contact" exact component={Contact} />
-                      <Route component={NotFound} />
-                    </Switch>
-                  </HelmetProvider>
+                  <AnimationsProvider>
+                    <Toggle />
+                    <Nav />
+                    <HelmetProvider>
+                      <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/about" exact component={About} />
+                        <Route path="/details/:id" exact component={Details} />
+                        <Route path="/contact" exact component={Contact} />
+                        <Route component={NotFound} />
+                      </Switch>
+                    </HelmetProvider>
+                  </AnimationsProvider>
                 </SharedProvider>
               </DestinationsProvider>
             </GalleryProvider>

@@ -14,12 +14,12 @@ const Destinations = () => {
 			<div className="container">
 				<div className="row ml-minus-15 mr-minus-15">
 					<div className="col-6 p-15">
-						<h3 className="destinations__heading">
+						<h3 className="destinations__heading animation">
 							{state.heading}
 						</h3>
 					</div>
 					<div className="col-6 p-15">
-						<p className="destinations__paragraph">
+						<p className="destinations__paragraph animation">
 							{state.paragraph}
 						</p>
 					</div>

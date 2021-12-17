@@ -6,7 +6,7 @@ import { dataType } from '../context/DestinationsContext'
 const DestinationsList = (props: {destination: dataType}) => {
 	return (
 		<div className="col-3 p-15">
-			<div className="destinations__card">
+			<div className="destinations__card animation">
 				<div className="destinations__card__img">
 					<LazyLoadImage src={props.destination.image} alt={props.destination.image} />
 				</div>

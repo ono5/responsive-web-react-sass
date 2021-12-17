@@ -16,7 +16,7 @@ const ReviewBody = (props : {review: reviewType}) => {
 	}
 	return (
 		<div className="col-4 p-15">
-			<div className="reviews__body">
+			<div className="reviews__body animation">
 				<div className="reviews__body__contents">
 					<div className="reviews__body__contents__image">
 						<LazyLoadImage src={props.review.image} alt={props.review.image} />
