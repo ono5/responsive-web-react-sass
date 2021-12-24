@@ -2,11 +2,17 @@
 
 .destinationInfo {
   margin: 8rem 0;
+  @include responsive(xsmall) {
+    margin: 4rem 0;
+  }
 
   &__p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: $silverDark;
     line-height: 2.8rem;
+    @include responsive(medium) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__details {
@@ -15,7 +21,7 @@
     border-bottom: 1px dotted $sliverLight-50;
 
     &__head {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: $silverDark;
     }
 

@@ -11,6 +11,9 @@
       font-size: 2rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
+      @include abstracts.responsive(xsmall) {
+        font-size: 1.7rem;
+      }
     }
   }
 
@@ -20,7 +23,25 @@
     height: auto;
     padding: 2rem;
     font-size: 1.4rem;
+    @include abstracts.animation(modelAnimates, 0.5s, linear, -10rem, 0);
+    @include abstracts.responsive(xsmall) {
+      width: 100%;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
   }
 
-  @include abstracts.animation(modelAnimates, 0.5s, linear, -10rem, 0);
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include abstracts.responsive(xsmall) {
+      flex-direction: column;
+      align-items: start;
+      span {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+  }
 }

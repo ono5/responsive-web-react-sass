@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async"
 import Header from "../components/Header"
 import DestinationInfo from "../components/Desinationinfo"
 import Cities from "../components/cities/Cities"
+import Footer from "../components/footer/Footer"
 
 const Details = () => {
 	const { destinationsData, dispatch } = useContext(DestinationsContext)
@@ -24,6 +25,7 @@ const Details = () => {
 			<Header heading={details.name} paragraph="" children="" image={details.image}></Header>
 			<DestinationInfo details={details} />
 			<Cities cities={filteredCities} name={details.name} />
+			<Footer />
 		</>
 	)
 }
